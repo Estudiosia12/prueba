@@ -47,13 +47,40 @@ function cargarResumenCompra() {
   subtotalElem.textContent = `S/ ${subtotal.toFixed(2)}`;
   totalElem.textContent    = `S/ ${(subtotal + costoEnvio).toFixed(2)}`;
 }
-
-/* ------------------------------------------------------------------ */
-/* ✅  Confirmar pedido y enviarlo al backend                          */
 function confirmarPedido(e) {
   e.preventDefault();
 
-  /* Datos del formulario ---------- */
+  /* --- Validaciones mínimas --------------------------------------- */
+  const obligatorios = ["nombre", "apellidos", "direccion", "telefono", "correo"];
+  for (const id of obligatorios) {
+    if (!document.getElementById(id).value.trim()) {
+      alert("Por favor, complete todos los campos obligatorios.");
+      return;
+    }
+  }
+
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  if (carrito.length === 0) {
+    alert("Tu carrito está vacío.");
+    return;
+  }
+
+  /* --- Todo OK: mostrar mensaje, vaciar carrito y redirigir -------- */
+  alert("¡Pedido realizado con éxito! 🎉");
+
+  localStorage.removeItem("carrito");   // resetea el carrito
+
+  // si quieres permanecer en la misma página, comenta la línea siguiente
+  window.location.href = "index.html";
+}
+
+/* ------------------------------------------------------------------ */
+/* ✅  Confirmar pedido y enviarlo al backend                          */
+/*
+function confirmarPedido(e) {
+  e.preventDefault();
+
+  /* Datos del formulario ---------- 
   const nombre     = document.getElementById("nombre").value.trim();
   const apellidos  = document.getElementById("apellidos").value.trim();
   const direccion  = document.getElementById("direccion").value.trim();
@@ -62,7 +89,7 @@ function confirmarPedido(e) {
   const notas      = document.getElementById("notas").value.trim();
   const tipoEnvio  = document.querySelector('input[name="envio"]:checked')?.value;
 
-  /* Validaciones básicas ---------- */
+  Validaciones básicas ---------- 
   if (!nombre || !apellidos || !direccion || !telefono || !correo) {
     alert("Por favor, complete todos los campos obligatorios.");
     return;
@@ -74,20 +101,20 @@ function confirmarPedido(e) {
     return;
   }
 
-  /* Totales ---------- */
+   Totales ---------- 
   const subtotal    = carrito.reduce((s, p) => s + p.precio * p.cantidad, 0);
   const costoEnvio  = tipoEnvio === "delivery" ? 9 : 0;
   const total       = subtotal + costoEnvio;
 
-  /* Cliente ----------
+  Cliente ----------
      - si existe en localStorage (sesión iniciada) se usa
-     - si no, se crea uno “invitado” con los datos del formulario         */
+     - si no, se crea uno “invitado” con los datos del formulario         
   let cliente = JSON.parse(localStorage.getItem("cliente"));
   if (!cliente) {
     cliente = { nombre, apellidos, direccion, telefono, correo };
   }
 
-  /* Pedido completo --------------- */
+   Pedido completo --------------- 
   const pedido = {
     total,
     envio: tipoEnvio,
@@ -102,7 +129,7 @@ function confirmarPedido(e) {
 
   console.log("Pedido JSON:", JSON.stringify(pedido, null, 2));
 
-  /* Enviar al backend ------------- */
+  /* Enviar al backend ------------- 
   fetch("http://localhost:8080/api/pedidos", {
     method : "POST",
     headers: { "Content-Type": "application/json" },
@@ -122,7 +149,7 @@ function confirmarPedido(e) {
       alert("Hubo un problema al realizar el pedido.");
     });
 }
-
+*/
 /* ------------------------------------------------------------------ */
 /* 🧹  Cancelar pedido                                                 */
 function cancelarPedido() {
