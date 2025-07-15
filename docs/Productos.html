@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Productos - AmasArte</title>
+  <title>Productos ‑ AmasArte</title>
   <link rel="stylesheet" href="CSS/Lista.css" />
 </head>
 
@@ -41,6 +41,7 @@
 <section class="productos-container">
   <div class="productos-lista">
 
+    <!-- SECCIÓN PANES -->
     <div class="seccion-producto">
       <h3>Panes</h3>
       <div class="grid-productos">
@@ -48,7 +49,7 @@
           <img src="img/PanFrances.jpg" alt="Pan Francés" />
           <div class="producto-info">
             <h4>Pan Francés</h4>
-            <p>Precio: S/ 0.50</p>
+            <p>Precio: S/ 0.50</p>
             <input type="number" id="input0" min="1" />
             <button onclick="agregarAlCarrito(1, 'Pan Francés', 'input0', 0.5)">Agregar</button>
           </div>
@@ -58,7 +59,7 @@
           <img src="img/pan-leña.jpg" alt="Pan Leña" />
           <div class="producto-info">
             <h4>Pan Leña</h4>
-            <p>Precio: S/ 0.70</p>
+            <p>Precio: S/ 0.70</p>
             <input type="number" id="input1" min="1" />
             <button onclick="agregarAlCarrito(2, 'Pan Leña', 'input1', 0.7)">Agregar</button>
           </div>
@@ -68,7 +69,7 @@
           <img src="img/Pan-ciabatta.jpg" alt="Pan Ciabatta" />
           <div class="producto-info">
             <h4>Pan Ciabatta</h4>
-            <p>Precio: S/ 1.20</p>
+            <p>Precio: S/ 1.20</p>
             <input type="number" id="input2" min="1" />
             <button onclick="agregarAlCarrito(3, 'Pan Ciabatta', 'input2', 1.2)">Agregar</button>
           </div>
@@ -78,7 +79,7 @@
           <img src="img/PanChancay.jpg" alt="Pan Chancay" />
           <div class="producto-info">
             <h4>Pan Chancay</h4>
-            <p>Precio: S/ 0.80</p>
+            <p>Precio: S/ 0.80</p>
             <input type="number" id="input3" min="1" />
             <button onclick="agregarAlCarrito(4, 'Pan Chancay', 'input3', 0.8)">Agregar</button>
           </div>
@@ -86,6 +87,7 @@
       </div>
     </div>
 
+    <!-- SECCIÓN TORTAS -->
     <div class="seccion-producto">
       <h3>Tortas</h3>
       <div class="grid-productos">
@@ -93,7 +95,7 @@
           <img src="img/Chocolate.jpeg" alt="Torta Chocolate" />
           <div class="producto-info">
             <h4>Torta Chocolate</h4>
-            <p>Precio: S/ 35.00</p>
+            <p>Precio: S/ 35.00</p>
             <input type="number" id="input4" min="1" />
             <button onclick="agregarAlCarrito(5, 'Torta Chocolate', 'input4', 35.0)">Agregar</button>
           </div>
@@ -103,7 +105,7 @@
           <img src="img/Chantilly.png" alt="Torta Chantilly" />
           <div class="producto-info">
             <h4>Torta Chantilly</h4>
-            <p>Precio: S/ 38.00</p>
+            <p>Precio: S/ 38.00</p>
             <input type="number" id="input5" min="1" />
             <button onclick="agregarAlCarrito(6, 'Torta Chantilly', 'input5', 38.0)">Agregar</button>
           </div>
@@ -113,7 +115,7 @@
           <img src="img/torta-3-leches.jpg" alt="Torta Tres Leches" />
           <div class="producto-info">
             <h4>Torta Tres Leches</h4>
-            <p>Precio: S/ 40.00</p>
+            <p>Precio: S/ 40.00</p>
             <input type="number" id="input6" min="1" />
             <button onclick="agregarAlCarrito(7, 'Torta Tres Leches', 'input6', 40.0)">Agregar</button>
           </div>
@@ -123,28 +125,30 @@
           <img src="img/Budin.jpg" alt="Budín" />
           <div class="producto-info">
             <h4>Budín</h4>
-            <p>Precio: S/ 15.00</p>
+            <p>Precio: S/ 15.00</p>
             <input type="number" id="input7" min="1" />
             <button onclick="agregarAlCarrito(8, 'Budín', 'input7', 15.0)">Agregar</button>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 
+  <!-- CARRITO -->
   <div class="carrito">
-    <h3>Tu Carrito 🛒</h3>
+    <h3>Tu Carrito 🛒</h3>
     <div id="carrito-items">No hay productos en el carrito</div>
     <br />
-    <a class="button" href="DetalleCompra.html" >Ir a Pagar</a>
+    <a class="button" href="DetalleCompra.html">Ir a Pagar</a>
   </div>
 </section>
 
 <footer>
   <div class="contacto">
     <h4>CONTACTO</h4>
-    <p><img src="img/telefono.png" alt="Teléfono" /> +51 987 654 321</p>
-    <p><img src="img/Ubica.png" alt="Ubicación" /> Av. San Martín Nº 123</p>
+    <p><img src="img/telefono.png" alt="Teléfono" /> +51 987 654 321</p>
+    <p><img src="img/Ubica.png" alt="Ubicación" /> Av. San Martín Nº 123</p>
     <p><img src="img/correo.png" alt="Correo" /> <strong>AmasArte@gmail.com</strong></p>
   </div>
   <div class="social">
@@ -157,19 +161,10 @@
 </footer>
 
 <div class="derechos">
-  <p>2025 Panadería “AmasArte”. Todos los derechos reservados</p>
+  <p>2025 Panadería “AmasArte”. Todos los derechos reservados</p>
 </div>
-<div id="modalUsuario" class="modal">
-  <div class="modal-contenido">
-    <h3>¿Tienes una cuenta?</h3>
-    <p>Para continuar con tu compra, por favor inicie sesion:</p>
-    <div class="modal-botones">
-      <button onclick="window.location.href='login.html'">Iniciar Sesión</button>
-<!--      <button onclick="window.location.href='DetalleCompra.html'">Registrarse</button>-->
-      <button onclick="cerrarModal()">Cancelar</button>
-    </div>
-  </div>
-</div>
+
+<!-- Ya no existe el modal de inicio de sesión -->
 
 <script src="JS/carrito.js"></script>
 <script src="JS/cerrarSesion.js"></script>
