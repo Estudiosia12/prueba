@@ -1,0 +1,42 @@
+.registro-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.registro-container h2 {
+    text-align: center;
+    color: #7B1213;
+}
+
+.registro-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.registro-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #7B1213;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.registro-container p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.registro-container a {
+    color: #7B1213;
+    text-decoration: none;
+}
