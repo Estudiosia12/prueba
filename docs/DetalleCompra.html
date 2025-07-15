@@ -1,3 +1,4 @@
+<!--  FinalizarPedido.html  -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -43,14 +44,9 @@
 
   <div class="checkout-resumen">
     <h3>Tu pedido</h3>
-    <table>
-      <tbody id="tabla-pedido"></tbody>
-    </table>
+    <table><tbody id="tabla-pedido"></tbody></table>
 
-    <div class="pedido-linea">
-      <span>Subtotal</span>
-      <span id="subtotal">S/. 0.00</span>
-    </div>
+    <div class="pedido-linea"><span>Subtotal</span><span id="subtotal">S/. 0.00</span></div>
 
     <div class="opciones-envio">
       <strong>Envío</strong><br />
@@ -58,10 +54,7 @@
       <label><input type="radio" id="retiro" name="envio" value="retiro" /> Retiro Tienda</label>
     </div>
 
-    <div class="pedido-linea total">
-      <span>Total</span>
-      <span id="total">S/. 0.00</span>
-    </div>
+    <div class="pedido-linea total"><span>Total</span><span id="total">S/. 0.00</span></div>
 
     <button class="button" type="button" onclick="confirmarPedido(event)">Realizar Pedido</button>
     <button class="button" onclick="cancelarPedido()">Cancelar Pedido</button>
